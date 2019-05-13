@@ -1,7 +1,7 @@
 sudo: required
 services:
   - docker
-language: go
+language: python
 deploy:
   provider: gae
   project: ethereal-brace-240418
