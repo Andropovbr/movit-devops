@@ -1,6 +1,6 @@
 sudo: required
 services:
-- docker
+  - docker
 language: python
 deploy:
   provider: gae
