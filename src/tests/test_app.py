@@ -34,3 +34,6 @@ class DevOpsTestCase(TestCase):
                 'candidate': 'Welcome to the DevOps test'
             }
         )
+
+if __name__ == '__main__':
+    unittest.main()

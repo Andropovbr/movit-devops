@@ -14,7 +14,8 @@ class DevOps(Resource):
 
     """
 
-    def get(self):
+    @staticmethod
+    def get():
         """The get method of this resource
 
         :return: Return welcome to the candidate
@@ -28,4 +29,4 @@ class DevOps(Resource):
 API.add_resource(DevOps, '/')
 
 if __name__ == '__main__':
-    APP.run(debug=True,host="0.0.0.0")
+    APP.run(debug=True, host="0.0.0.0")

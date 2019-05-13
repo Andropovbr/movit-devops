@@ -1,14 +1,13 @@
 sudo: required
-
 services:
-  - docker
-
+- docker
+language: python
+deploy:
+  provider: gae
+  project: ethereal-brace-240418
+  keyfile: gce.json
+  verbosity: debug
+  on: master
 before_install:
-  - docker build -t movit-devops -f Dockerfile .
-  - docker run -d --name app movit-devops
-
-script:
-  - docker exec app python -m unittest discover
-
-after_script:
-  - docker rm -f app
+- openssl aes-256-cbc -K $encrypted_2a468507c033_key -iv $encrypted_2a468507c033_iv
+  -in gce.json.enc -out gce.json -d
