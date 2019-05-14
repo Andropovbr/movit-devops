@@ -4,6 +4,6 @@ WORKDIR /usr/src/app
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
-#RUN chmod 644 src/api/app.py
+RUN chmod 644 src/api/app.py
 EXPOSE 5000
 CMD [ "python", "src/api/app.py" ]
